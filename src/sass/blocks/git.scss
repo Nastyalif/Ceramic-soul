@@ -1,0 +1,154 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.git {
+    position: relative;
+    margin-top: 60px;
+    h2 {
+        margin-bottom: 59px;
+    }
+    &__img_tea,
+    &__img_vase {
+        display: none;
+    }
+     
+    &__btn {
+        max-width: 220px;
+        max-height: 40px;
+        margin: 20px auto 0 0;
+        font-size: 16px;
+    }
+    &__form { 
+        width: 300px;
+        height: 376px;
+    }
+    &__fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__label {
+        display: block; /* позаоляет элементы располагать над каждыи input-том */
+        color: $dark;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px; /* позволит создать широкое поле ввода */
+        &:nth-child(2) {
+            margin-top: 8px;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 48px;
+        padding: 10px 15px;
+        color: $dark;
+        border-radius: 2px;
+        border: 1px solid #e2e1e5;
+        background: #fff;
+        &:focus {
+            border: none;
+            outline: 1px solid $dark;
+        }
+        &::placeholder { /* псевдо элемент*/
+            color: $ui-disabled;
+            font-size: 14px;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        height: 132px;
+        padding: 10px 15px;
+        color: $dark;
+        border-radius: 2px;
+        border: 1px solid #e2e1e5;
+        background: #fff; 
+        resize: none; 
+        &:focus {
+            border: none;
+            outline: 1px solid $dark;
+        }
+        &::placeholder { /* псевдо элемент*/
+            color: $ui-disabled;
+            font-size: 14px;
+        }
+    }
+    &__ckeck-block {
+        display: flex;
+		align-items: center;
+		margin-top: 20px;
+        a {
+           color: #a22dc6;
+           text-decoration: none;
+        }
+    }
+    &__checkbox {
+        margin-right: 15px;
+        width: 15px;
+        height: 15px;
+    }
+}
+ 
+@media screen and (min-width: 768px) {
+    .git {
+        h2 {
+           margin-bottom: 45px; 
+        }
+        &__img_vase {
+                display: block;
+                position: absolute;
+                margin: 0 auto;
+                width: 85px;
+                height: 85px;
+                right: 24px;
+                bottom: -60px;
+            }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .git {
+        h2 {
+                margin-bottom: 0;
+            }
+        &__img_tea {
+                display: block;
+            }
+        &__wrapper {
+            margin-top: 80px;
+        }
+        &__img_tea {
+            height: 342px;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+        }
+        &__tea_col {
+            padding: 0 20px;
+        }
+        &__input {
+        &:hover {
+            border: none;
+            outline: 1px solid $dark;
+        }
+    }
+}
+}
+
+@media screen and (min-width:1920px) {
+    .git {
+        &__img_tea {
+            width: 573px;
+            height: 356px;
+        }
+        &__form {
+            width: 645px;
+            height: 356px;
+        }
+        &__tea_col {
+            padding: 0 73.5px 0 0;
+        }
+        &__form_col {
+            padding: 0 0 0 73.5px;
+        }
+        &__img_vase {
+        right: 315px;
+        }
+    }
+}
