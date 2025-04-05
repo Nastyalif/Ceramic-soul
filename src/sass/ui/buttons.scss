@@ -9,6 +9,17 @@
     font-size: 20px;
 }
 
+.btn-read {
+    @include button;
+    width: 145px;
+    height: 32px;
+    font-size: 14px;
+        &:focus {
+            outline: 1px solid $cetamic;
+            border: 1px solid $cetamic;
+        }
+}
+
 
 
 @media screen and (min-width:1200px) 
@@ -23,6 +34,16 @@
             box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.14) inset; /* inset - говорит, что таень будет светить во внутрь */
             color: $dark;
             border: none;
+        }
+    }
+    .btn-read {
+        &:active {
+            outline: 1px solid $cetamic;
+            border: 1px solid $cetamic;
+        }
+        &:hover {
+            color: $cetamic;
+            border: 1px solid $cetamic;
         }
     }
 }

@@ -1,0 +1,96 @@
+@use "/src/sass/base/variables.scss" as *;
+.works {
+  padding-top: 100px;
+  &__slider {
+    margin-top: 40px;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .works__slider-nav {
+    display: none;
+  }
+  .swiper-pagination {
+    bottom: -35px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-color: $dark;
+    border-radius: 0%;
+    opacity: 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $cetamic;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .works {
+    padding-top: 110px;
+    .swiper-slide img {
+      display: block;
+      width: 400px;
+      margin: 0 auto;
+    }
+    &__slider {
+      margin-top: 45px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works {
+    padding-top: 130px;
+    &__wrapper {
+      position: relative;
+    }
+    &__slider {
+      margin: 80px 40px 0 40px;
+    }
+    .works__slider-nav {
+      position: absolute;
+      top: 50%;
+      display: block;
+      font-size: 21px;
+      border-color: transparent;
+      border: none;
+      padding: 0;
+      transform: translateY(-50%);
+      &:before {
+        width: auto;
+        margin: 0;
+      }
+  }
+  .swiper-pagination {
+    bottom: -30px;
+  }
+  .icon-left-open {
+    left: 15px;
+  }
+  .icon-right-open {
+    right: 15px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    margin: 0;
+  }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .works {
+    padding-top: 150px;
+    &__slider {
+      margin: 80px 85px 0 85px;
+    }
+    .icon-left-open {
+      left: 40px;
+    }
+    .icon-right-open {
+      right: 40px;
+    }
+  }
+}
